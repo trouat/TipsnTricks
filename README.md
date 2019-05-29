@@ -9,5 +9,5 @@ The target is the VPN access point.
 
 ```target="IP"; i=1500; while ping -M do -W1 -s $i -c1 $target 2>&1 | grep "too long"; do i=$(( $i - 10 )); done; while ! ping -M do -W1 -s $i -c1 $target 2>&1 | grep "too long"; do i=$(( $i + 1 )); done; i=$(( $i - 1 )); echo ">> MTU $i <<\n>> VPN $(( $i - 40 )) <<";```
 
-Edit the /etc/openvpn/client/client.conf file to introduce the following directive:
+Edit the `/etc/openvpn/client/client.conf` file to introduce the following directive:
 ```mssfix <VPN_VALUE>```

@@ -11,3 +11,6 @@ The target is the VPN access point.
 
 Edit the `/etc/openvpn/client/client.conf` file to introduce the following directive:
 ```mssfix <VPN_VALUE>```
+
+## Get my public IP, command line
+```$( (which drill || which dig) | tail -n1 ) +short myip.opendns.com @resolver1.opendns.com```

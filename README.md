@@ -14,3 +14,6 @@ Edit the `/etc/openvpn/client/client.conf` file to introduce the following direc
 
 ## Get my public IP, command line
 ```$( (which drill || which dig) | tail -n1 ) +short myip.opendns.com @resolver1.opendns.com```
+
+## Archlinux Key could not be looked up remotely
+```pacman -S archlinux-keyring && pacman-key --init && pacman-key --populate```
